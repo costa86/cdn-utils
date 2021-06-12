@@ -1,4 +1,4 @@
-function getStringCollection(collection, choice) {
+export function getStringCollection(collection, choice) {
     let lower = collection.map(x => x.toLowerCase());
     let upper = lower.map(x => x.toUpperCase());
     let lowerInitials = lower.map(x => x.slice(0, 3));
@@ -11,11 +11,13 @@ function getStringCollection(collection, choice) {
     }
     return options[choice] || lower;
 }
-function getWeekDays(choice) {
+
+export function getWeekDays(choice) {
     let collection = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
     return (getStringCollection(collection, choice));
 }
-function getMonths(choice) {
+
+export function getMonths(choice) {
     let collection = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];
     return (getStringCollection(collection, choice));
 }
